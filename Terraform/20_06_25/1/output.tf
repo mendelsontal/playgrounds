@@ -1,5 +1,5 @@
 output "internal_ip" {
-  value = docker_container.my_container.ip_address
+  value = docker_container.my_container.network_data[0].ip_address
 }
 
 output "internal_port" {
