@@ -20,9 +20,13 @@ variable "container_name" {
 }
 
 variable "int_port" { 
-    default = "80" 
+    default = "2368" 
 } 
 
 variable "ext_port" { 
-    default = "2368" 
+    type = "map"
+    default = {
+        dev = "8081"
+        prod = "8080"
+    }
 }
