@@ -6,7 +6,7 @@ resource "docker_container" "my_nginx_container" {
     name  = "nginx_task73"
     image = docker_image.nginx.image_id
     ports {
-        internal:80
+        internal = 80
         external = 80
     }
 
