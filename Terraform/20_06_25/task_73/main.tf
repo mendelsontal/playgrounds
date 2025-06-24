@@ -10,8 +10,8 @@ resource "docker_container" "nginx_container" {
     external = 80
   }
 
-    volumes {
-        host_path      = abspath("${path.module}/index.html")
-        container_path = "/usr/share/nginx/html/index.html"
-    }
+volumes {
+    host_path      = abspath("${path.module}/index.html")
+    container_path = "/usr/share/nginx/html/index.html"
+}
 }
